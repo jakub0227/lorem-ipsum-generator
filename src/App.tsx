@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {StylesProvider, Typography} from '@material-ui/core'
 import {Layout} from './hoc/Layout/Layout'
 import {Theme} from './hoc/Theme/Theme'
+import {HomePage} from './pages/HomePage/HomePage'
 
 export const App: FC = () => {
 	
@@ -13,9 +14,7 @@ export const App: FC = () => {
 					<Layout>
 						<Switch>
 							<Route exact path='/'>
-								<Typography variant='h1'>
-									Hello from Main Page!
-								</Typography>
+								<HomePage/>
 							</Route>
 							<Route>
 								<Typography variant='h1'>
