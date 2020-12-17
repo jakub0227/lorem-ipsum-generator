@@ -1,7 +1,6 @@
 import {css} from '@emotion/react'
 import {FC} from 'react'
-import {GlobalStyle} from './GlobalStyle/GlobalStyle'
-import {Paper, useTheme} from '@material-ui/core'
+import {CssBaseline, Paper, useTheme} from '@material-ui/core'
 import {Footer} from './Footer/Footer'
 import {Navigation} from './Navigation/Navigation'
 
@@ -24,13 +23,11 @@ export const Layout: FC = (props) => {
 	}
 	
 	return (
-		
 		<Paper square elevation={0} css={styles.root}>
-			<GlobalStyle/>
+			<CssBaseline/>
 			<Navigation/>
 			<Paper css={styles.page}>{props.children}</Paper>
 			<Footer/>
 		</Paper>
-	
 	)
 }
