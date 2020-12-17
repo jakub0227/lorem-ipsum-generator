@@ -1,7 +1,7 @@
-import {FC} from 'react'
 import {Container, Typography} from '@material-ui/core'
+import {Route} from '../../types/Route/Route'
 
-export const HomePage: FC = () => {
+export const HomePage: Route = () => {
 	return (
 		<Container>
 			<Typography variant='h1'>
@@ -10,3 +10,7 @@ export const HomePage: FC = () => {
 		</Container>
 	)
 }
+
+HomePage.routeName = '/'
+HomePage.displayName = 'Home'
+HomePage.icon = 'home'

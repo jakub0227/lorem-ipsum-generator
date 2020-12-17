@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="688180da-6ef3-4b94-944e-acee8c8e53cd" name="Default Changelist" comment="Start new template app, basic layout with Browser Router, Material-UI, Emotion">
-      <change afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hoc/Layout/Navigation/MobileMenu/MobileMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hoc/Layout/Navigation/NavigationItems/NavigationItem/NavigationItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hoc/Layout/Navigation/NavigationItems/NavigationItems.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hoc/Layout/Navigation/NavigationItems/routeList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/IconType/IconType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/Route/Route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Navigation/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608211964595</updated>
-      <workItem from="1608211967598" duration="5133000" />
+      <workItem from="1608211967598" duration="6350000" />
     </task>
     <task id="LOCAL-00001" summary="Start new template app">
       <created>1608214317413</created>
@@ -66,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608214701135</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Start new template app, basic layout with Browser Router, Material-UI, Emotion">
+      <created>1608218788883</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608218788883</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
