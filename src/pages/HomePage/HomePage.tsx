@@ -1,8 +1,7 @@
-import {Button, Container, Grow, Typography, useTheme, Zoom} from '@material-ui/core'
+import {Container, Typography, useTheme, Zoom} from '@material-ui/core'
 import {Route} from '../../types/Route/Route'
-import lorem from '../../assets/Images/lorem.png'
 import {css} from '@emotion/react'
-import {Link} from 'react-router-dom'
+import {LoremPageGenerator} from '../LoremPage/LoremPageGenerator/LoremPageGenerator'
 
 export const HomePage: Route = () => {
 	const theme = useTheme()
@@ -38,17 +37,10 @@ export const HomePage: Route = () => {
 					Welcome designers!
 				</Typography>
 			</Zoom>
-			<Zoom in timeout={2500}>
+			<Zoom in timeout={1500}>
 				<Typography variant='h5'>Generate Lorem Ipsum:</Typography>
 			</Zoom>
-			<Grow enter in timeout={4000}>
-				<Button
-					component={Link}
-					to='/lorem'
-					css={styles.button}>
-					<img css={styles.picture} src={lorem} alt='lorem'/>
-				</Button>
-			</Grow>
+			<LoremPageGenerator/>
 		</Container>
 	)
 }
