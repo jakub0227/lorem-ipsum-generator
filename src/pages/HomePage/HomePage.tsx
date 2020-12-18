@@ -41,7 +41,7 @@ export const HomePage: Route = () => {
 			<Zoom in timeout={2500}>
 				<Typography variant='h5'>Generate Lorem Ipsum:</Typography>
 			</Zoom>
-			<Grow enter in timeout={3000}>
+			<Grow enter in timeout={4000}>
 				<Button
 					component={Link}
 					to='/lorem'
