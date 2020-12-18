@@ -10,6 +10,8 @@ export const Navigation: FC = () => {
 		root: css`
           margin-right: ${theme.spacing(4)} px;
           display: flex;
+          background: linear-gradient(135deg, #12c2e9 20%, #c471ed 30%, #f64f59 70%);
+          color: #fff;
 		`,
 		toolBar: css`
           ${theme.customMixins.flexCentered};
@@ -19,7 +21,7 @@ export const Navigation: FC = () => {
 		`,
 		menuButton: css`
           margin-right: ${theme.spacing(1)}px;
-          color: #000a;
+          color: #fff;
 		`,
 	}
 	
@@ -34,7 +36,7 @@ export const Navigation: FC = () => {
 						<Icon>menu</Icon>
 					</IconButton>
 				</Hidden>
-				<Typography css={styles.title} variant='h6'>Your Personal: App Template</Typography>
+				<Typography css={styles.title} variant='h6'>Your Personal: Lorem Ipsum</Typography>
 				<Hidden xsDown>
 					<NavigationItems/>
 				</Hidden>

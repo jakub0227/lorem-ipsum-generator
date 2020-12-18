@@ -21,7 +21,7 @@ export const Theme: FC = (props) => {
 			palette: {
 				type: 'dark',
 				primary: colors.deepPurple,
-				secondary: colors.lightGreen,
+				secondary: colors.blueGrey,
 			},
 			props: {
 				MuiAppBar: {
@@ -30,6 +30,7 @@ export const Theme: FC = (props) => {
 				},
 				MuiTypography: {
 					gutterBottom: true,
+					color: 'textPrimary',
 				},
 			},
 			customMixins: {
