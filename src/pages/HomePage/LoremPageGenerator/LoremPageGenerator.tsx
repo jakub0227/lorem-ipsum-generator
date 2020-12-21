@@ -16,6 +16,7 @@ import {
 import {css} from '@emotion/react'
 import useClippy from 'use-clippy'
 import loremIpsum from '../../../loremIpsum.json'
+import {useSnackbar} from 'notistack'
 
 function ValueLabelComponent(props: {
 	children: React.ReactElement;
@@ -72,18 +73,31 @@ export const LoremPageGenerator: FC = () => {
 		return arrCopy
 	}
 	
+	const {enqueueSnackbar} = useSnackbar()
+	
 	const handleCopyClick = () => {
-		if (wordsOrLetters) {
-			const loremWords = createArrayLoopingToN(loremIpsum.split(' '), words)
-			
-			const loremWordsExpected = loremWords.slice(0, words)
-			setClipboard(loremWordsExpected.join(' '))
-		} else {
-			const loremLetters = createArrayLoopingToN(loremIpsum.split(''), letters)
-			
-			const loremLettersExpected = loremLetters.slice(0, letters)
-			setClipboard(loremLettersExpected.join(''))
+		try {
+			if (wordsOrLetters) {
+				const loremWords = createArrayLoopingToN(loremIpsum.split(' '), words)
+				
+				const loremWordsExpected = loremWords.slice(0, words)
+				setClipboard(loremWordsExpected.join(' '))
+				
+			} else {
+				const loremLetters = createArrayLoopingToN(loremIpsum.split(''), letters)
+				
+				const loremLettersExpected = loremLetters.slice(0, letters)
+				setClipboard(loremLettersExpected.join(''))
+			}
+			enqueueSnackbar('Copied to clipboard!', {
+				variant: 'success',
+			})
+		} catch (error) {
+			enqueueSnackbar('Failed to copy', {
+				variant: 'error',
+			})
 		}
+		
 	}
 	
 	type SliderDataType = {
