@@ -1,5 +1,16 @@
 import {css} from '@emotion/react'
-import {Button, Container, Step, StepLabel, Stepper, Typography, useTheme} from '@material-ui/core'
+import {
+	Box,
+	Button,
+	ButtonGroup,
+	Container,
+	Step,
+	StepLabel,
+	Stepper,
+	Typography,
+	useTheme,
+	Zoom,
+} from '@material-ui/core'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import {Route} from '../../types/Route/Route'
@@ -8,13 +19,15 @@ export const HelpPage: Route = () => {
 	const theme = useTheme()
 	const styles = {
 		root: css`
-          width: 550px;
+          width: 600px;
 		`,
 		backButton: css`
           margin-right: ${theme.spacing(1)} px;
+          background-color: #12c2e9;
+          opacity: 90%
 		`,
 		instructions: css`
-          margin-top: ${theme.spacing(1)} px;
+          margin-top: ${theme.spacing(3)} px;
           margin-bottom: ${theme.spacing(1)} px;
 		`,
 	}
@@ -24,7 +37,7 @@ export const HelpPage: Route = () => {
 		return ['Generate Lorem Ipsum...', 'By Words or Letters...', 'Click and copy to clipboard !']
 	}
 	const steps = getSteps()
-	const getStepContent = (stepIndex: number | any) => {
+	const getStepContent = (stepIndex: number) => {
 		switch (stepIndex) {
 			case 0:
 				return 'Having problems with finding text to your web-design?'
@@ -44,46 +57,47 @@ export const HelpPage: Route = () => {
 	}
 	
 	return (
-		<Container css={styles.root}>
-			<Stepper activeStep={activeStep} alternativeLabel>
-				{steps.map((label) => (
-					<Step color='contained' key={label}>
-						<StepLabel>{label}</StepLabel>
-					</Step>
-				))}
-			</Stepper>
-			<div>
+		<Zoom in timeout={1000}>
+			<Container css={styles.root}>
+				<Stepper activeStep={activeStep} alternativeLabel>
+					{steps.map((label) => (
+						<Step color='contained' key={label}>
+							<StepLabel>{label}</StepLabel>
+						</Step>
+					))}
+				</Stepper>
 				<div>
-					<Typography gutterBottom variant='h6'
-					            css={styles.instructions}>{getStepContent(activeStep)}</Typography>
-					<div>
-						<Button
-							variant='contained'
-							color='secondary'
-							disabled={activeStep === 0}
-							onClick={handleBack}
-							css={styles.backButton}
-						>
-							Back
-						</Button>
-						{activeStep === steps.length - 1 ?
-							(<Button variant='contained'
-							         color='primary'
-							         component={Link}
-							         to={'/'}>
-									Proceed
-								</Button>
-							) : (
-								<Button variant='contained'
-								        color='primary'
-								        onClick={handleNext}>
-									Next
-								</Button>
-							)}
-					</div>
+					<Box>
+						<Typography gutterBottom variant='h6'
+						            css={styles.instructions}>{getStepContent(activeStep)}</Typography>
+						<ButtonGroup>
+							<Button
+								variant='contained'
+								disabled={activeStep === 0}
+								onClick={handleBack}
+								css={styles.backButton}
+							>
+								Back
+							</Button>
+							{activeStep === steps.length - 1 ?
+								(<Button variant='contained'
+								         color='primary'
+								         component={Link}
+								         to={'/'}>
+										Proceed
+									</Button>
+								) : (
+									<Button variant='contained'
+									        color='primary'
+									        onClick={handleNext}>
+										Next
+									</Button>
+								)}
+						</ButtonGroup>
+					</Box>
 				</div>
-			</div>
-		</Container>
+			</Container>
+		</Zoom>
 	
 	)
 }

@@ -5,7 +5,7 @@ import {FC} from 'react'
 
 const ACCORDIONS = [
 	{
-		name: 'Participation agreement, Data analytics, Privacy Policy Credentials',
+		name: 'Data analytics, Privacy Policy Credentials',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eius eveniet facere illum ipsam iure optio quaerat quod, repellendus saepe sint velit voluptatem, voluptates! Accusamus accusantium aperiam delectus dicta dolor hic inventore laudantium, modi mollitia nam nobis optio repudiandae sunt.',
 		icon: 'expand_more',
 	},
